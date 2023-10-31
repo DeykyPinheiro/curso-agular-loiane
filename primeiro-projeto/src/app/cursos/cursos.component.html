@@ -1,3 +1,6 @@
-<p>cursos component funcionante </p>
+<p>Lista de cursos do portal {{nomeGithub}}</p>
 
 
+<li *ngFor="let curso of listaDeCursos; index as i">
+    {{i+1}} - {{curso}}
+</li>

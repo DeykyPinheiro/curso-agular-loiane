@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CursosComponent {
 
+  nomeGithub: string = "https://github.com/deykypinheiro"
+
+  listaDeCursos: string[] = ["java", "js", "angulas"]
 }

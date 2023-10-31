@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
     ({
         selector: 'meu-primeiro-component', // nome que eu uma em uma tag ao chamar o component
         template: `
-    <p> meu primeiro component com Angular ` // aqui pode ser a urlTemplate, ai vai pra um arquivo .html
+    <p> meu primeiro component com Angular </p>` // aqui pode ser a urlTemplate, ai vai pra um arquivo .html
     })
 export class MeuPrimeiroComponent { } // nome do componente só que em camelCase
 
