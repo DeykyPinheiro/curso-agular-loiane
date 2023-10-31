@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { CursosService } from './cursos.service';
+
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
@@ -9,5 +11,16 @@ export class CursosComponent {
 
   nomeGithub: string = "https://github.com/deykypinheiro"
 
-  listaDeCursos: string[] = ["java", "js", "angulas"]
+  // errado, isso é uma instancia pura, pra usar, a instancia padrao tenho que receber no construtor
+  // private cursosService = new CursosService();
+
+  listaDeCursos: string[] = [];
+
+  constructor(
+    // isso é uma injecao de dependencia
+    private cursosService: CursosService
+  ) {
+    this.listaDeCursos = this.cursosService.getListaCursos();
+  }
+
 }
