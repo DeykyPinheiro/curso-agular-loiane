@@ -1,0 +1,20 @@
+<section class="property-biding">
+    <article>
+        <h3>Interpolation / Interpolação</h3>
+        <p>String renderizada com interpolação: {{ urlNome }}</p>
+        <p>soma via interpolação de 1 + 1 = {{ 1+1 }}</p>
+        <p>soma via interpolação de 1 + 1 + get valor() = {{ 1 + 1 + getValor() }}</p>
+        <p>curtiu o curso: {{ getCurtirCurso() }}</p>
+    </article>
+
+    <article>
+        <h3>property-biding</h3>
+
+        <p>img via variavel</p>
+        <img src="{{ urlImage }}" alt="imagem randomica">
+
+        <p>img via data biding</p>
+        <img [src]="urlImage" alt="imagem randomica">
+
+    </article>
+</section>
