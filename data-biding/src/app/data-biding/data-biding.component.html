@@ -17,4 +17,54 @@
         <img [src]="urlImage" alt="imagem randomica">
 
     </article>
+
+
+    <article>
+        <h3>Class e Style Binding</h3>
+        <div>
+            Selecione uma Classe:
+            <!-- criação de uma variavel local -->
+            <!-- onchange serve pra escutar o evento -->
+            <select #classe (change)="0">
+                <!-- tirado da documentacao do angular -->
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-info">Informação</option>
+                <option value="alert-warning">Atenção</option>
+                <option value="alert-danger">Perigo</option>
+            </select>
+
+            <div class="alert alert-danger" role="alert"
+                [style.display]="classe.value === 'alert-danger' ? 'block': 'none'">
+                esse texto só aparece em caso de erro
+            </div>
+
+            <div>
+                <p class="alert {{classe.value}}" role="alert">
+                    texto colorido de acordo com a classe selecionada
+                </p>
+            </div>
+
+            <!-- compara o valor de dentro do seletor e se for true é aplicado -->
+            <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+                Sucesso
+            </div>
+
+            <div class="alert" role="alert" [class.alert-info]="classe.value === 'alert-info'">
+                Informação
+            </div>
+
+            <div class="alert" role="alert" [class.alert-warning]="classe.value === 'alert-warning'">
+                Atenção
+            </div>
+
+            <div class="alert" role="alert" [class.alert-danger]="classe.value === 'alert-danger'">
+                Perigo
+            </div>
+
+
+
+        </div>
+
+    </article>
+
 </section>
