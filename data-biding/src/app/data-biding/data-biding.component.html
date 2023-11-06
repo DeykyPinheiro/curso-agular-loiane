@@ -1,6 +1,6 @@
 <section class="property-biding">
     <article>
-        <h3>Interpolation / Interpolação</h3>
+        <h1>Interpolation / Interpolação</h1>
         <p>String renderizada com interpolação: {{ urlNome }}</p>
         <p>soma via interpolação de 1 + 1 = {{ 1+1 }}</p>
         <p>soma via interpolação de 1 + 1 + get valor() = {{ 1 + 1 + getValor() }}</p>
@@ -20,7 +20,7 @@
 
 
     <article>
-        <h3>Class e Style Binding</h3>
+        <h1>Class e Style Binding</h1>
         <div>
             Selecione uma Classe:
             <!-- criação de uma variavel local -->
@@ -60,10 +60,35 @@
             <div class="alert" role="alert" [class.alert-danger]="classe.value === 'alert-danger'">
                 Perigo
             </div>
-
-
-
         </div>
+
+    </article>
+
+    <article>
+        <h1>Event binding</h1>
+        <p>ouvir eventos com angular</p>
+        <div>
+            <button class="btn btn-primary" (click)="botaoClicado()">eu sou um botão</button>
+        </div>
+        <br>
+
+        <!-- testanto com input de texto  quando a tecla sobe-->
+        <!-- acho que a manei do keyup.enter nao é recomendada já pode ter valor null -->
+        <!-- (keyup.enter)="pressEnter($event.target.value)" -->
+
+        <input type="text" (keyup)="onkeyUp($event)" (keyup.enter)="pressEnter($event)" (blur)="pressEnter($event)"
+            #campoInput />
+
+        <p>(muda a cada tecla apertada) texto digitado: {{ textDigitado }}</p>
+        <p>(só muda quando o campo perde o foco) texto digitado : {{ textoSalvo }}</p>
+        <p>(só muda quando aperto enter) texto digitado : {{ textoSalvo }}</p>
+
+        <br>
+
+        <!-- [class.alert-danger]="classe.value === 'alert-danger' -->
+        <span (mouseover)="mouseOverOut()" (mouseout)="mouseOverOut()" class="alert" [class.alert-success]="isMouseOver">
+            passe o mouse aqui
+        </span>
 
     </article>
 
