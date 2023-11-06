@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-data-biding',
   templateUrl: './data-biding.component.html',
@@ -17,7 +18,14 @@ export class DataBidingComponent {
 
   textoSalvo: string = "";
 
+  nome: string = "nome inicial";
+
   isMouseOver: boolean = false;
+
+  pessoa: any = {
+    nome: "jogerson",
+    idade: 20
+  }
 
   // usado no property biding
   getValor(): number {

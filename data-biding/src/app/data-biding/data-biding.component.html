@@ -39,7 +39,7 @@
             </div>
 
             <div>
-                <p class="alert {{classe.value}}" role="alert">
+                <p class="alert {{ classe.value }}" role="alert">
                     texto colorido de acordo com a classe selecionada
                 </p>
             </div>
@@ -86,10 +86,41 @@
         <br>
 
         <!-- [class.alert-danger]="classe.value === 'alert-danger' -->
-        <span (mouseover)="mouseOverOut()" (mouseout)="mouseOverOut()" class="alert" [class.alert-success]="isMouseOver">
-            passe o mouse aqui
+        <span (mouseover)="mouseOverOut()" (mouseout)="mouseOverOut()" class="alert"
+            [class.alert-success]="isMouseOver">
+            PASSE O MOUSE AQUI
         </span>
 
+    </article>
+
+    <article>
+        <h1>Two-way data biding</h1>
+        <div>
+
+            <!-- REALMENTE NAO FUNCIONA -->
+            <!-- nao funciona mais, nao sei se pq ta muito antigo -->
+            <!-- <input type="text" [value]="nome" (input)="nome = $event.target.value" /> -->
+            <!-- <p> voce digitou: {{ nome }}</p> -->
+
+
+            <!-- FUNCIONA -->
+            <!-- usando ngModel -->
+            <!-- <input type="text" [ngModel]="nome" (ngModelChange)="nome = $event" /> -->
+            <!-- <p> voce digitou: {{ nome }}</p> -->
+
+
+            <!-- LEMBRAR DE ADICIONAR FORMSMODULE -->
+            <h2>forma mais moderna</h2>
+            <input type="text" [(ngModel)]="nome">
+            <p> voce digitou: {{ nome }}</p>
+
+            
+            <input type="text" [(ngModel)]="pessoa.nome">
+            <input type="text" [(ngModel)]="pessoa.idade">
+            <p>eu sou {{ pessoa.nome }} e tenho {{  pessoa.idade }}</p>
+
+
+        </div>
     </article>
 
 </section>
