@@ -22,6 +22,8 @@ export class DataBidingComponent {
 
   isMouseOver: boolean = false;
 
+  nomeDoCurso: string = "Angular";
+
   pessoa: any = {
     nome: "jogerson",
     idade: 20
