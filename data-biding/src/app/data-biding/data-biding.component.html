@@ -126,7 +126,12 @@
         <article>
             <h1>Input/Output Properties</h1>
             <app-curso-input [nome]="nomeDoCurso"></app-curso-input>
+
+            <app-output-property [valor]="valorInicialContador" (mudouValor)=onMudouValor($event)></app-output-property>
+
         </article>
     </section>
+
+
 
 </section>

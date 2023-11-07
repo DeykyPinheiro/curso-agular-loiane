@@ -24,6 +24,8 @@ export class DataBidingComponent {
 
   nomeDoCurso: string = "Angular";
 
+  valorInicialContador: number = 15;
+
   pessoa: any = {
     nome: "jogerson",
     idade: 20
@@ -60,5 +62,10 @@ export class DataBidingComponent {
     this.isMouseOver = !this.isMouseOver;
   }
 
+
+  // está escutando um evento
+  onMudouValor(event: any) {
+    console.log(event)
+  }
 
 }
