@@ -1,0 +1,26 @@
+section {
+    background-color: gray;
+}
+
+h1 {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+
+
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+}
+
+p {
+    height: 100vh;
+    background: white;
+    max-width: 600px;
+    min-width: 270px;
+    margin: auto;
+
+    padding: 30px 15px;
+}
