@@ -1,5 +1,14 @@
-<h1>Data Biding</h1>
+<!--
+    para ver algum modo basta 
+    descomentar o modulo 
+-->
 
-<app-data-biding> </app-data-biding>
+
+<!-- <app-data-biding> </app-data-biding> -->
 
 
+
+<!-- quando nao deletar ele mostra -->
+<app-ciclo [valorInicial]="valor" *ngIf="!destruirCiclo"></app-ciclo>
+<button (click)="mudarValor()" class="btn btn-success">Mudar Valor</button>
+<button (click)="deletarCiclo()" class="btn btn-danger">destruir ciclo</button>
