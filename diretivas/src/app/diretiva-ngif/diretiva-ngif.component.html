@@ -1,0 +1,19 @@
+<h2>*ngif</h2>
+
+
+
+
+<!-- mostrar apenas se tiver cursos -->
+<div *ngIf="cursos.length > 0">Lista de cursos</div>
+
+<div *ngIf="mostrarCursos">Lista de cursos</div>
+
+
+<!-- <div *ngIf="cursos.length === 0">Não existem cursos para serem listados</div> -->
+
+<button (click)="onMostrarCursos()">mostrarCursos</button>
+
+
+<div class="hidden" [hidden]="mostrarCursos">Não existem cursos para serem listados</div>
+
+<!-- dependendo do que for fazer  é melhor usar o hidden, coisa pequenas preferencialmente -->
